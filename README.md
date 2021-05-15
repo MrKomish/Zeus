@@ -4,6 +4,7 @@ An OOP programming language in development that combines an advanced type system
 
 ## Design Playground
 
+```
 Primitive Types
 str
 u8
@@ -149,3 +150,4 @@ IdentifierLiteral
 <variable_name>: <type> = <value>
 
 a = socket() // creates a socket
+```
