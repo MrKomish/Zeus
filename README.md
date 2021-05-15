@@ -1,3 +1,9 @@
+# Zeus
+
+An OOP programming language in development that combines an advanced type system inspired by TypeScript, the syntax simplicity of Python, and the ideas and efficiency of Rust and C++. Written in C++ using LLVM.
+
+## Design Playground
+
 Primitive Types
 str
 u8
