@@ -4,7 +4,7 @@ An OOP programming language in development that combines an advanced type system
 
 ## Design Playground
 
-```
+```dart
 Primitive Types
 str
 u8
@@ -150,7 +150,6 @@ IdentifierLiteral
 <variable_name>: <type> = <value>
 
 a = socket() // creates a socket
-```
 
 Source(statements: [
     Statement(),
@@ -172,7 +171,6 @@ class Type {
 }
 
 
-```dart
 type User = Class(members: [
     Property(name: "name", type: Type),
     Method(name: "name",
@@ -300,8 +298,6 @@ class User {
 
 type A = {};
 
-```
-
 data class Optional<T> {
     [member.signature(): ] for member in T.props()
 }
@@ -316,3 +312,4 @@ interface MegaUsers = Union<Users, MachineGun>
 var: (types['']) = {}
 
 if x is y:
+```
