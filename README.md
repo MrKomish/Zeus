@@ -193,9 +193,7 @@ fn gql<code: str>: GraphQLType {
 
 optional<User>(name)
 
-variable | type
------------------------
-function | type function
+variable | type 
 
 UsersQuery = gql<"
     query {
@@ -312,4 +310,97 @@ interface MegaUsers = Union<Users, MachineGun>
 var: (types['']) = {}
 
 if x is y:
+```
+
+```
+fn gql<code: str>: GraphQLType {
+   result = http.request<"server/graphql.schema">
+   return result
+}
+fn getRoute<router: Router, route: String>: Route {
+    items = Vec<i32>
+    items.add<123>
+    return items
+
+    for r in router.routes<> {
+       if r.maches(route) {
+            return r
+       }
+    }
+    return NotFoundRoute()
+}
+
+trait StringRepresentable {
+    toString(): String
+}
+StringRepresentable = Trait<members: [
+    Method<name: "toString",
+        args: [],
+        returnType: String>
+]>
+
+class User {
+    name: String
+    age: i32
+}
+User = Trait<members: [
+    Property<name: "name", type: String>,
+    Property<name: "age", type: i32>
+]>
+
+imlp StringRepresentable for User {
+    String toString() {
+        return "User { " + name + ", " + String.from(age) + "}"
+    }
+}
+StringRepresentable = Type<members: {
+    Method<name: "toString",
+        args: [],
+        returnType: String> : Language<statements: [
+            Return<value: 
+                BinaryOperator<
+                    String("User {"),
+                    Identifier("name"),
+                    String(", "),
+                    Whatever,
+                    String("}")
+                >
+            >
+        ]>
+}>
+
+fn deepPartial<T: Type> {
+    if (T is PrimitiveType) {
+        return partial<T>;
+    }
+    
+    if (T is Optional) {
+        return deepPartial<T.type<>>;
+    }
+
+    return Type<
+        properties: [Property<name: name, type: deepPartial<type>> for { name, type } in T.properties<>],
+        methods: [Method<name: name, args: args, returnType: deepPartial<type>> for { name, args, type } in T.methods<>]
+    >
+}
+
+class Complex {
+    Complex(i32 real, Optional<i32> imaginary, bool gpu) {
+    
+    }
+}
+Complex(0, gpu: True)
+
+x = 123
+x += 134
+x += 12342
+x += 234343
+return x
+
+Steps:
+Lexer
+Parser
+Doing what can done at compile time -> X can be done if every Y that it depends on can
+-> All logic but things that require runtime or can be changed in runtime
+
 ```
