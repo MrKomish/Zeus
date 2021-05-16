@@ -151,3 +151,168 @@ IdentifierLiteral
 
 a = socket() // creates a socket
 ```
+
+Source(statements: [
+    Statement(),
+    
+])
+
+interface Users {
+    [''] for key in users if
+}
+
+class Users {
+    id: number;
+    name: str;
+    age: number;
+}
+
+class Type {
+    void mem();
+}
+
+
+```dart
+type User = Class(members: [
+    Property(name: "name", type: Type),
+    Method(name: "name",
+        args: [MethodArg(name: "", type: Type)],
+        returnType: Type
+    )
+])
+
+trait Printable {
+
+}
+
+type user = Class<members: [
+    
+]>
+
+fn gql<code: str>: GraphQLType {
+   http.request("server/graphql.schema")
+}
+
+optional<User>(name)
+
+variable | type
+-----------------------
+function | type function
+
+UsersQuery = gql<"
+    query {
+        users
+    }
+">;
+
+apollo.query<UsersQuery>().users
+
+fn printable<T: Type>() {
+    return T.withAdded([]);
+}
+
+@inject
+class User {
+
+}
+
+class Default<T: Type, default: T> {
+    
+}
+
+petNamesByUsername : Map<key: String, value: Default<Vector<String>, []>>
+
+class Users {
+    public get(id: User['id']): User {
+        
+    }
+}
+
+router(
+    route(address) { pageByAddress(address) },
+    value: 
+)
+
+interface UserCreationDetails {
+    name: String
+    age: i32
+}
+
+class User {
+    User(@inject() db: Users, ...details: UserCreationDetails) {
+        db.users.create({name: details.name, age: details.age});
+    }
+    
+    User.of(UserDetails details) {
+        // work
+    }
+    
+    order(product: Product) {
+        
+    }
+    
+    details() {
+        // work
+    }
+}
+
+class Product {
+    Product() {
+    
+    }
+}
+
+user = User()
+user = User.of(users.get('123'))
+
+fn order(user: e.User, product: e.Product) {
+
+}
+
+class Orde
+
+FireService = FireService.injected(usersService: usersService)
+
+fn f(user: User) {
+   create(user)
+   Order(user, users)
+}
+
+class User {
+
+}
+
+trait StringRepresentable {
+    str toString()
+}
+
+implement StringRepresentable for 
+
+compilation void file() {
+
+}
+
+compilation x = 2;
+
+class User {
+    
+}
+
+type A = {};
+
+```
+
+data class Optional<T> {
+    [member.signature(): ] for member in T.props()
+}
+
+interface MachineGun {
+    key for key in Users
+    key for key in Master
+}
+
+interface MegaUsers = Union<Users, MachineGun>
+
+var: (types['']) = {}
+
+if x is y:
