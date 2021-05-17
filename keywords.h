@@ -26,6 +26,9 @@ public:
     const std::string RETURN = "return";
     const std::string TRUE = "true";
     const std::string FALSE = "false";
+    const std::string SELF = "this";
+    const std::string PUBLIC = "public";
+    const std::string PRIVATE = "private";
 
 private:
     inline static std::unique_ptr<Keywords> g_instance;

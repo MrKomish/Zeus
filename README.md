@@ -170,14 +170,16 @@ class Type {
     void mem();
 }
 
-
-type User = Class(members: [
+User = Class(name: "User", members: [
     Property(name: "name", type: Type),
     Method(name: "name",
         args: [MethodArg(name: "", type: Type)],
-        returnType: Type
+        returnType: Type,
+        content: (file) => {}
     )
 ])
+
+function find(user: User) {}
 
 trait Printable {
 
@@ -223,6 +225,8 @@ class Users {
         
     }
 }
+
+user: create<User>
 
 router(
     route(address) { pageByAddress(address) },
@@ -381,7 +385,7 @@ fn deepPartial<T: Type> {
     return Type<
         properties: [Property<name: name, type: deepPartial<type>> for { name, type } in T.properties<>],
         methods: [Method<name: name, args: args, returnType: deepPartial<type>> for { name, args, type } in T.methods<>]
-    >
+    >   
 }
 
 class Complex {
@@ -402,5 +406,16 @@ Lexer
 Parser
 Doing what can done at compile time -> X can be done if every Y that it depends on can
 -> All logic but things that require runtime or can be changed in runtime
+
+trait DeeplyPrintable extends Printable, Useful {
+    
+}
+
+class User implements DeeplyPrintable {
+    
+}
+```
+
+```
 
 ```
